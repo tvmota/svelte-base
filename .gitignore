@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+public/bundle.*
+package-lock.json
+yarn.lock
+licensed+5.pem
+licensed+5-key.pem
+.idea
