@@ -34,6 +34,7 @@ module.exports = {
             emitCss: true,
             hotReload: true,
             preprocess: [globalStyle(), sass(), scss(), require('autoprefixer')],
+            dev: !prod,
           },
         },
       },
@@ -46,6 +47,16 @@ module.exports = {
            * */
           prod ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+              ],
+            },
+          },
         ],
       },
     ],

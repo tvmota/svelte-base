@@ -4,6 +4,10 @@
 </script>
 
 <style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
   h1 {
     color: purple;
     text-align: center;
